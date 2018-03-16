@@ -2,7 +2,7 @@
 
 I wanted to make the [EFF's wordlist](https://www.eff.org/deeplinks/2016/07/new-wordlists-random-passphrases) easier to use "manually".
 
-So I hacked together this script to generate a Pdf of the eff diceware wordlist to be easy to search through.
+So I hacked together this script to generate a PDF of the EFF Random Passphrase wordlist to be easy to search through.
 
 Regenerate the pdf by running `make`.
 (requires `ghostscript`, `enscript`, and various `coreutils`).
