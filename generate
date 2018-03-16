@@ -19,5 +19,7 @@ do
 done
 
 # concatenate for final pdf
-gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=eff_large_wordlist.pdf output/*.pdf
+gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=eff_large_wordlist_columns.pdf output/*.pdf
 
+# concatenate for final txt
+cat output/*.txt > eff_large_wordlist_columns.txt
