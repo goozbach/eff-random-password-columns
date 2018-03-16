@@ -9,5 +9,3 @@ Regenerate the pdf by running `make`.
 
 Verified to work on osx, but should work in Linux.
 
-# TODO
-1. I should add a makefile target to pull the latest wordlist
