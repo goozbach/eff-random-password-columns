@@ -1,6 +1,6 @@
 # EFF wordlist in columns
 
-I wanted to make the wordlist easier to use "manually".
+I wanted to make the (https://www.eff.org/deeplinks/2016/07/new-wordlists-random-passphrases)[EFF's wordlist] easier to use "manually".
 
 So I hacked together this script to generate a Pdf of the eff diceware wordlist to be easy to search through.
 
