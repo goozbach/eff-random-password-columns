@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+# create column files
+mkdir -p temp/ output/
+for i in {1..6}{1..6}{1..6}
+do
+    echo "------- ${i} -------" > temp/${i}.txt
+    grep "^${i}" eff_large_wordlist.txt | sed 's/	/ /g' >> temp/${i}.txt
+done
+
+# bring files together and generate PDF
+for j in {1..6}{1..6}
+do
+    echo "========================================================= ${j} ==========================================================" > output/${j}.txt
+    paste temp/${j}*.txt | pr -t -e20 >> output/${j}.txt
+    echo "" >> output/${j}.txt
+    enscript -r -B -1 -o output/${j}.ps output/${j}.txt
+    ps2pdf output/${j}.ps output/${j}.pdf
+done
+
+# concatenate for final pdf
+gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=eff_large_wordlist.pdf output/*.pdf
+
